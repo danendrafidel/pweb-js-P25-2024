@@ -1,0 +1,160 @@
+/* General */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto";
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #000;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: black;
+  color: white;
+  padding: 1rem;
+  position: fixed;
+  top: 20px;
+  left: 0;
+  right: 0;
+  width: 85%;
+  margin: 0 auto;
+  z-index: 1000;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center; /* Untuk memastikan konten di navbar terpusat */
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px; /* Mengatur lebar maksimum navbar agar tetap terpusat */
+  width: 100%;
+  padding: 0 1rem; /* Memberi padding agar konten tidak terlalu menempel di tepi */
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.25rem; /* Menyesuaikan ukuran font untuk logo */
+  font-weight: bold;
+}
+
+.navbar-logo img {
+  width: 45px; /* Sedikit menyesuaikan ukuran logo agar proporsional */
+  height: auto;
+  margin-right: 10px;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem; /* Menambahkan jarak antar item menu */
+}
+
+.navbar-link {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem; /* Mengatur ukuran font pada menu */
+  padding: 0 1rem;
+}
+
+.navbar-link:hover {
+  text-decoration: underline;
+  color: rgb(195, 13, 13);
+}
+
+.navbar-icons {
+  display: flex;
+  gap: 1.5rem; /* Menambahkan jarak antar ikon */
+}
+
+.navbar-cart,
+.navbar-login {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem; /* Mengatur ukuran font untuk ikon */
+}
+
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-right: 50px;
+}
+
+.burger-menu .bar {
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  margin: 4px 0;
+}
+
+/* Landing Page Styles */
+.landing-page {
+  background-color: white;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.landing-content {
+  text-align: center;
+  color: black;
+}
+
+.landing-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.landing-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.shop-now-btn {
+  background-color: black;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 100px;
+  font-size: 1.25rem;
+}
+
+.shop-now-btn:hover {
+  background-color: darkblue;
+  text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .navbar-menu {
+    display: none;
+  }
+
+  .burger-menu {
+    display: flex;
+  }
+
+  .landing-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .landing-content p {
+    font-size: 1rem;
+  }
+}
