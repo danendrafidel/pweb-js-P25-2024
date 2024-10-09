@@ -101,6 +101,17 @@ body::-webkit-scrollbar {
   margin: 4px 0;
 }
 
+#searchInput {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+}
+
+#searchInput::placeholder {
+  color: #000000;
+}
+
 /* Landing Page Styles */
 .landing-page {
   background-image: url(/pweb-js-P25-2024/img/shoes-background.jpg);
