@@ -1,3 +1,4 @@
+// Bagian Filter
 // JavaScript to handle filtering and items per page
 document.addEventListener("DOMContentLoaded", function () {
   const categoryFilter = document.getElementById("category-filter");
@@ -43,3 +44,134 @@ document.addEventListener("DOMContentLoaded", function () {
   // Initial display update
   updateDisplay();
 });
+
+//Bagian Cart Update
+// JavaScript for Cart Functionality
+document.addEventListener("DOMContentLoaded", function () {
+  const cartItemsContainer = document.querySelector(".cart-items");
+  const totalPriceElement = document.getElementById("total-price");
+  const productItems = document.querySelectorAll(".product-item");
+  const cart = {};
+
+  // Function to update cart total
+  function updateCartTotal() {
+    let total = 0;
+    for (const id in cart) {
+      total += cart[id].price * cart[id].quantity;
+    }
+    totalPriceElement.innerText = `$${total.toFixed(2)}`;
+  }
+
+  // Function to render cart items
+  function renderCartItems() {
+    cartItemsContainer.innerHTML = ""; // Clear existing items
+    for (const id in cart) {
+      const item = cart[id];
+      const cartItem = document.createElement("div");
+      cartItem.classList.add("cart-item");
+      cartItem.innerHTML = `
+          <h4>${item.name} ($${item.price})</h4>
+          <div>
+            <button class="decrease-btn" data-id="${id}">-</button>
+            <span>${item.quantity}</span>
+            <button class="increase-btn" data-id="${id}">+</button>
+            <button class="remove-btn" data-id="${id}">Remove</button>
+          </div>
+        `;
+      cartItemsContainer.appendChild(cartItem);
+    }
+    updateCartTotal();
+  }
+
+  // Function to add item to cart
+  function addToCart(id, name, price) {
+    if (!cart[id]) {
+      cart[id] = { name, price, quantity: 1 };
+    } else {
+      cart[id].quantity += 1;
+    }
+    renderCartItems();
+  }
+
+  // Event delegation for cart item buttons
+  cartItemsContainer.addEventListener("click", (event) => {
+    const target = event.target;
+    const itemId = target.getAttribute("data-id");
+
+    if (target.classList.contains("remove-btn")) {
+      delete cart[itemId]; // Remove item from cart
+      renderCartItems();
+    } else if (target.classList.contains("increase-btn")) {
+      if (cart[itemId]) {
+        cart[itemId].quantity += 1;
+        renderCartItems();
+      }
+    } else if (target.classList.contains("decrease-btn")) {
+      if (cart[itemId]) {
+        if (cart[itemId].quantity > 1) {
+          cart[itemId].quantity -= 1;
+        } else {
+          delete cart[itemId]; // Remove item if quantity is 1
+        }
+        renderCartItems();
+      }
+    }
+  });
+});
+
+//API
+// const fetchData = async (url) => {
+//   try {
+//     const response = await fetch(url);
+//     if (!response.ok) {
+//       throw new Error("Failed to fetch data");
+//     }
+//     const data = await response.json();
+//     return data; // Ensure data is returned
+//   } catch (error) {
+//     console.error("Fetch error:", error);
+//   }
+// };
+
+// const populateProducts = async () => {
+//   const products = await fetchData("https://dummyjson.com/products");
+//   const productList = document.getElementById("product-list");
+
+//   // Check if products exist
+//   if (products && products.products) {
+//     products.products.forEach((product) => {
+//       const productItem = document.createElement("div");
+//       productItem.className = "product-item";
+//       productItem.setAttribute("data-category", product.category);
+
+//       productItem.innerHTML = `
+//                 <img src="${product.thumbnail}" alt="${product.title}" />
+//                 <h3>${product.title}</h3>
+//                 <p>$${product.price.toFixed(2)}</p>
+//                 <p><strong>Rating:</strong> ${product.rating}</p>
+//                 <p><strong>Stock:</strong> ${product.stock} units</p>
+//                 <a href="#" class="buy-btn">Buy Now</a>
+//             `;
+
+//       productList.appendChild(productItem);
+//     });
+//   }
+// };
+
+// // Call the function to fetch and populate products
+// populateProducts();
+
+// // Event listener for 'Buy Now' buttons
+// productItems.forEach((item) => {
+//   const buyButton = item.querySelector(".buy-btn");
+//   const itemId = item.querySelector("h3").innerText; // Use the product name as ID
+//   const itemName = item.querySelector("h3").innerText;
+//   const itemPrice = parseFloat(
+//     item.querySelector("p").innerText.replace("$", "")
+//   );
+
+//   buyButton.addEventListener("click", (event) => {
+//     event.preventDefault(); // Prevent default link behavior
+//     addToCart(itemId, itemName, itemPrice);
+//   });
+// });

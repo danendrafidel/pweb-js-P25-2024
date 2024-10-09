@@ -333,6 +333,46 @@ body::-webkit-scrollbar {
   background-color: darkblue;
   text-decoration: underline;
 }
+/* Cart Styles */
+.cart-section {
+  padding: 2rem;
+  border-top: 1px solid black;
+}
+
+.cart-header {
+  text-align: center;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  border-bottom: 1px solid black;
+}
+
+.cart-item h4 {
+  margin: 0;
+}
+
+.cart-item button {
+  padding: 0.5rem 1rem;
+  margin-left: 1rem;
+  border: none;
+  border-radius: 100px;
+  background-color: rgb(195, 13, 13);
+  color: white;
+  cursor: pointer;
+}
+
+.cart-item button:hover {
+  background-color: darkblue;
+}
+
+.cart-total {
+  text-align: right;
+  margin-top: 1rem;
+}
 
 /* Footer Styles */
 .footer {
