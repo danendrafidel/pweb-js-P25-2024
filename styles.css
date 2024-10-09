@@ -196,16 +196,34 @@ body::-webkit-scrollbar {
   background-color: black;
   color: white;
   padding: 0.75rem 1.5rem;
-  border: none;
   border-radius: 100px;
   font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 .about-btn:hover {
   background-color: darkblue;
   text-decoration: underline;
+}
+
+/* Filter Controls Styles */
+.filter-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.filter-controls label {
+  font-size: 1rem;
+  color: black;
+}
+
+.filter-controls select {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid black;
+  font-size: 1rem;
 }
 
 /* Products Page Styles */
@@ -223,6 +241,7 @@ body::-webkit-scrollbar {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 }
 
 .product-item {
@@ -232,6 +251,7 @@ body::-webkit-scrollbar {
   text-align: center;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
   margin-bottom: 2rem;
+  transition: transform 0.3s ease;
 }
 
 .product-item img {
@@ -250,6 +270,10 @@ body::-webkit-scrollbar {
   margin-bottom: 1rem;
 }
 
+.product-item:hover {
+  transform: scale(1.05);
+}
+
 .buy-btn {
   background-color: black;
   color: white;
@@ -257,7 +281,6 @@ body::-webkit-scrollbar {
   text-decoration: none;
   border-radius: 100px;
 }
-
 .buy-btn:hover {
   background-color: darkblue;
   text-decoration: underline;
@@ -291,7 +314,7 @@ body::-webkit-scrollbar {
 
 .comments-form input:focus,
 .comments-form textarea:focus {
-  border: 1px solid #000;
+  border: 1px solid black;
 }
 
 .submit-btn {
@@ -313,7 +336,7 @@ body::-webkit-scrollbar {
 
 /* Footer Styles */
 .footer {
-  background-image: url("/pweb-js-P25-2024/img/card-image2.jpg");
+  background-image: url("/pweb-js-P25-2024/img/card-large-item11.jpg");
   background-size: cover;
   background-position: center;
   color: white;
@@ -328,7 +351,7 @@ body::-webkit-scrollbar {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6); /* Dark overlay for contrast */
+  background: rgba(0, 0, 0, 0.6);
   z-index: 1;
 }
 
@@ -337,7 +360,7 @@ body::-webkit-scrollbar {
   justify-content: space-around;
   flex-wrap: wrap;
   position: relative;
-  z-index: 2; /* Ensure content is above overlay */
+  z-index: 2;
   padding: 0 20px;
 }
 
