@@ -95,7 +95,7 @@
       </select>
     </div>
   </div>
-  <div class="products-gallery">
+  <div class="products-gallery" id="product-list">
     <div class="product-item" data-category="vans">
       <img src="/pweb-js-P25-2024/img/card-item1.jpg" alt="Shoe 1" />
       <h3>Vans Oldskool Brown</h3>
@@ -171,17 +171,17 @@
   </div>
 </section>
 
-      <!-- Cart Modal -->
-      <div id="cart-modal" class="cart-modal">
-        <h2>Cart</h2>
-        <div id="cart-items"></div>
-        <div id="cart-summary">
-          <p>Subtotal: $<span id="cart-total">0</span></p>
-          <button id="view-cart-btn">View Cart</button>
-          <button id="checkout-btn">Checkout</button>
-        </div>
-      </div>
-    </div>
+ <!-- Cart Section -->
+<section id="cart" class="cart-section">
+  <div class="cart-header">
+    <h2>Your Cart</h2>
+  </div>
+  <div class="cart-items"></div>
+  <div class="cart-total">
+    <h3>Total: <span id="total-price">$0</span></h3>
+  </div>
+</section>
+
     
 <!-- Comment Section -->
       <div class="comments-form">
