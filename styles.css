@@ -138,7 +138,7 @@ body::-webkit-scrollbar {
   margin-bottom: 2rem;
 }
 
-.shop-now-btn {
+.landing-btn {
   background-color: black;
   color: white;
   padding: 1rem 2rem;
@@ -147,7 +147,63 @@ body::-webkit-scrollbar {
   font-size: 1.25rem;
 }
 
-.shop-now-btn:hover {
+.landing-btn:hover {
+  background-color: darkblue;
+  text-decoration: underline;
+}
+/* About Us Section Styles */
+.about-section {
+  padding: 4rem 0;
+  background-color: whitesmoke;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.about-image img {
+  width: 500px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-content {
+  max-width: 600px;
+  padding-left: 2rem;
+}
+
+.about-content h2 {
+  font-size: 2.5rem;
+  color: black;
+  margin-bottom: 1rem;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: black;
+  margin-bottom: 1.5rem;
+}
+
+.about-btn {
+  background-color: black;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 100px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.about-btn:hover {
   background-color: darkblue;
   text-decoration: underline;
 }
@@ -155,7 +211,6 @@ body::-webkit-scrollbar {
 /* Products Page Styles */
 .products-page {
   padding: 50px 0;
-  background-color: #f8f9fa;
 }
 
 .products-header {
@@ -173,7 +228,7 @@ body::-webkit-scrollbar {
 .product-item {
   background-color: white;
   padding: 20px;
-  border-radius: 50px;
+  width: 300px;
   text-align: center;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
   margin-bottom: 2rem;
@@ -182,7 +237,6 @@ body::-webkit-scrollbar {
 .product-item img {
   width: 100%;
   height: auto;
-  border-radius: 50px;
   margin-bottom: 1rem;
 }
 
@@ -209,53 +263,7 @@ body::-webkit-scrollbar {
   text-decoration: underline;
 }
 
-/* Comments Page Styles */
-.comments-page {
-  padding: 20px 0;
-  background-color: whitesmoke;
-  /* background-image: url(/pweb-js-P25-2024/img/card-image6.jpg); */
-}
-
-.comments-header {
-  text-align: center;
-  margin-bottom: 3rem;
-  font-size: 48px;
-  color: black;
-}
-
-.comments-section {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  margin-bottom: rem;
-  padding: 0 20px;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.comment-item {
-  background-color: black;
-  padding: 20px;
-  border-radius: 40px;
-  transition: transform 0.2s ease-in-out;
-}
-
-.comment-item:hover {
-  transform: scale(1.02);
-}
-
-.comment-item h4 {
-  font-size: 1.5rem;
-  margin-bottom: 0.75rem;
-  color: white;
-}
-
-.comment-item p {
-  font-size: 1rem;
-  color: white;
-  line-height: 1.6;
-}
-
+/* Comment Section */
 .comments-form {
   display: flex;
   justify-content: center;
@@ -278,7 +286,6 @@ body::-webkit-scrollbar {
   border-radius: 20px;
   border: 1px solid black;
   font-size: 1rem;
-  background-color: white;
   transition: border 0.3s;
 }
 
@@ -290,11 +297,12 @@ body::-webkit-scrollbar {
 .submit-btn {
   background-color: black;
   color: white;
-  padding: 0.75rem 1.5rem;
+  padding: 1rem 2rem;
   border: none;
   border-radius: 100px;
   font-size: 1.2rem;
   cursor: pointer;
+  margin-bottom: 100px;
   transition: background-color 0.3s;
 }
 
@@ -364,7 +372,7 @@ body::-webkit-scrollbar {
 }
 
 .footer-links ul li a:hover {
-  color: #ff6347; /* Tomato color on hover */
+  color: rgb(195, 13, 13); /* Tomato color on hover */
   text-decoration: underline;
 }
 
@@ -379,7 +387,7 @@ body::-webkit-scrollbar {
 
 .footer-social a:hover {
   transform: scale(1.1); /* Slight enlarge on hover */
-  color: #ff6347;
+  color: rgb(195, 13, 13);
 }
 
 .footer-bottom {

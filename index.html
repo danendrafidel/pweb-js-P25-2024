@@ -49,9 +49,32 @@
       <div class="landing-content">
         <h1>Welcome to SikilKaryo</h1>
         <p>Biggest Shoes Store in Ngawi</p>
-        <a href="#products" class="shop-now-btn">Shop Now</a>
+        <a href="#about" class="landing-btn">About Us</a>
       </div>
     </section>
+
+    <!-- About Us Section -->
+<section id="about" class="about-section">
+  <div class="about-container">
+    <div class="about-image">
+      <img src="img/landingpage1.jpg" alt="About Shoe Store">
+    </div>
+    <div class="about-content">
+      <h2>About Us</h2>
+      <p>
+        Welcome to <strong>SikilKaryo</strong>, your go-to destination for high-quality shoes. We provide a diverse selection of footwear to meet all your needs, from casual wear to high-performance athletic shoes. Our mission is to offer style, comfort, and durability at unbeatable prices.
+      </p>
+      <p>
+        Founded in 2022, ShoeMart has quickly become a trusted name in the industry, known for our excellent customer service and premium products. We believe that the right pair of shoes can take you anywhere!
+      </p>
+      <p>
+        Shop with us and experience the best in footwear. Whether you’re looking for the latest trends or timeless classics, we’ve got you covered!
+      </p>
+      <a href="#products" class="about-btn">Shop Now</a>
+    </div>
+  </div>
+</section>
+
     <!-- Products Page -->
     <section id="products" class="products-page">
       <div class="products-header">
@@ -84,7 +107,7 @@
         </div>
         <div class="product-item">
           <img src="/pweb-js-P25-2024/img/card-item5.jpg" alt="Shoe 3" />
-          <h3>Nike Air Force 1</h3>
+          <h3>Nike Air Max 1</h3>
           <p>$70</p>
           <a href="#" class="buy-btn">Buy Now</a>
         </div>
@@ -121,25 +144,19 @@
       </div>
     </section>
 
-    <!-- Comments Page -->
-    <section id="review" class="comments-page">
-      <div class="comments-header">
-        <h2>Customer Reviews</h2>
-      </div>
-      <div class="comments-section">
-        <div class="comment-item">
-          <h4>John Doe</h4>
-          <p>"Great quality shoes, very comfortable!"</p>
-        </div>
-        <div class="comment-item">
-          <h4>Jane Smith</h4>
-          <p>"Affordable and stylish! Will definitely buy again."</p>
-        </div>
-        <div class="comment-item">
-          <h4>Michael Johnson</h4>
-          <p>"Delivery was fast, and the shoes fit perfectly!"</p>
+      <!-- Cart Modal -->
+      <div id="cart-modal" class="cart-modal">
+        <h2>Cart</h2>
+        <div id="cart-items"></div>
+        <div id="cart-summary">
+          <p>Subtotal: $<span id="cart-total">0</span></p>
+          <button id="view-cart-btn">View Cart</button>
+          <button id="checkout-btn">Checkout</button>
         </div>
       </div>
+    </div>
+    
+<!-- Comment Section -->
       <div class="comments-form">
         <div>
           <h3>Leave a Review</h3>
