@@ -119,6 +119,47 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// bagian search product
+document.addEventListener("DOMContentLoaded", function () {
+  const searchInput = document.getElementById("search-input");
+  const productItems = document.querySelectorAll(".product-item");
+  const productList = document.getElementById("product-list");
+  const unavailableMessage = document.createElement("div");
+  unavailableMessage.innerText = "Product Unavailable";
+  unavailableMessage.style.display = "none"; // Sembunyikan pesan awal
+  productList.appendChild(unavailableMessage);
+
+  // Function to handle search
+  function handleSearch() {
+    const searchTerm = searchInput.value.toLowerCase().trim();
+    let foundProducts = 0;
+
+    productItems.forEach((item) => {
+      const itemName = item.querySelector("h3").innerText.toLowerCase();
+
+      // Check if the product matches the search term
+      if (itemName.includes(searchTerm)) {
+        item.style.display = "block"; // Tampilkan produk yang cocok
+        foundProducts++;
+      } else {
+        item.style.display = "none"; // Sembunyikan produk yang tidak cocok
+      }
+    });
+
+    // Tampilkan atau sembunyikan pesan 'Product Unavailable'
+    if (foundProducts === 0) {
+      unavailableMessage.style.display = "block"; // Tampilkan pesan jika tidak ada produk yang ditemukan
+    } else {
+      unavailableMessage.style.display = "none"; // Sembunyikan pesan jika ada produk yang ditemukan
+    }
+  }
+
+  // Event listener untuk menangani input pencarian
+  searchInput.addEventListener("input", handleSearch);
+});
+
+
+
 //API
 // const fetchData = async (url) => {
 //   try {
