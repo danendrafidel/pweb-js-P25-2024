@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function () {
   fetchProducts();
 });
 
-//Bagian Cart
+// Bagian Cart
 document.addEventListener("DOMContentLoaded", function () {
   const categoryFilter = document.getElementById("category-filter");
   const itemsPerPageSelect = document.getElementById("items-per-page");
@@ -167,26 +167,24 @@ document.addEventListener("DOMContentLoaded", function () {
       productItem.setAttribute("data-category", product.category);
 
       productItem.innerHTML = `
-      <img src="${product.image}" alt="${product.name}" />
-      <h3>${product.name}</h3>
-      <p>$${product.price}</p>
-      <button class="buy-now-btn add-to-cart-btn" data-id="${product.id}">Buy Now</button>
-    `;
+        <img src="${product.image}" alt="${product.name}" />
+        <h3>${product.name}</h3>
+        <p>$${product.price}</p>
+        <button class="buy-now-btn add-to-cart-btn" data-id="${product.id}">Buy Now</button>
+      `;
 
       productList.appendChild(productItem);
     });
 
-    // Handle visibility of the pagination buttons or message if no products
     if (filteredProducts.length === 0) {
       productList.innerHTML = "<p>No products found.</p>";
     }
 
-    // Add event listeners to "Add to Cart" buttons
     const addToCartButtons = document.querySelectorAll(".add-to-cart-btn");
     addToCartButtons.forEach((button) => {
       button.addEventListener("click", (e) => {
-        const productId = e.target.getAttribute("data-id");
-        const product = products.find((p) => p.id == productId);
+        const productId = parseInt(e.target.getAttribute("data-id")); // Convert to number
+        const product = products.find((p) => p.id === productId);
         addToCart(product);
       });
     });
@@ -206,6 +204,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function removeFromCart(productId) {
+    productId = parseInt(productId); // Convert to number
     const cartItemIndex = cart.findIndex((item) => item.id === productId);
     if (cartItemIndex > -1) {
       cart.splice(cartItemIndex, 1);
@@ -222,12 +221,16 @@ document.addEventListener("DOMContentLoaded", function () {
       const cartItem = document.createElement("div");
       cartItem.classList.add("cart-item");
       cartItem.innerHTML = `
-          <h4>${item.name} (x${item.quantity})</h4>
-          <p>$${item.price * item.quantity}</p>
-          <button class="remove-item-btn" data-id="${item.id}">Remove</button>
-          <button class="increase-quantity-btn" data-id="${item.id}">+</button>
-          <button class="decrease-quantity-btn" data-id="${item.id}">-</button>
-        `;
+            <h4>${item.name} (x${item.quantity})</h4>
+            <p>$${item.price * item.quantity}</p>
+            <button class="remove-item-btn" data-id="${item.id}">Remove</button>
+            <button class="increase-quantity-btn" data-id="${
+              item.id
+            }">+</button>
+            <button class="decrease-quantity-btn" data-id="${
+              item.id
+            }">-</button>
+          `;
       cartItemsContainer.appendChild(cartItem);
 
       totalPrice += item.price * item.quantity;
@@ -243,7 +246,7 @@ document.addEventListener("DOMContentLoaded", function () {
       cartItem
         .querySelector(".increase-quantity-btn")
         .addEventListener("click", (e) => {
-          const productId = e.target.getAttribute("data-id");
+          const productId = parseInt(e.target.getAttribute("data-id")); // Convert to number
           const cartItemIndex = cart.findIndex((item) => item.id === productId);
           if (cartItemIndex > -1) {
             cart[cartItemIndex].quantity++;
@@ -255,7 +258,7 @@ document.addEventListener("DOMContentLoaded", function () {
       cartItem
         .querySelector(".decrease-quantity-btn")
         .addEventListener("click", (e) => {
-          const productId = e.target.getAttribute("data-id");
+          const productId = parseInt(e.target.getAttribute("data-id")); // Convert to number
           const cartItemIndex = cart.findIndex((item) => item.id === productId);
           if (cartItemIndex > -1 && cart[cartItemIndex].quantity > 1) {
             cart[cartItemIndex].quantity--;

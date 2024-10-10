@@ -355,7 +355,7 @@ body::-webkit-scrollbar {
 .remove-item-btn {
   background-color: black;
   color: white;
-  padding: 0.2rem 1rem;
+  padding: 0.5rem 1rem;
   text-decoration: none;
   border-radius: 100px;
   text-transform: uppercase;
@@ -368,7 +368,7 @@ body::-webkit-scrollbar {
 .increase-quantity-btn {
   background-color: black;
   color: white;
-  padding: 0.2rem 1rem;
+  padding: 0.5rem 1rem;
   text-decoration: none;
   border-radius: 100px;
   text-transform: uppercase;
@@ -381,7 +381,7 @@ body::-webkit-scrollbar {
 .decrease-quantity-btn {
   background-color: black;
   color: white;
-  padding: 0.2rem 1rem;
+  padding: 0.5rem 1rem;
   text-decoration: none;
   border-radius: 100px;
   text-transform: uppercase;
