@@ -33,7 +33,7 @@
           </li>
         </ul>
         <div class="navbar-icons">
-          <a href="#" class="navbar-cart">🛒 Cart</a>
+          <a href="#cart" class="navbar-cart">🛒 Cart</a>
           <a href="#" class="navbar-login">🔑 Login</a>
         </div>
         <div class="burger-menu">
@@ -54,136 +54,155 @@
     </section>
 
     <!-- About Us Section -->
-<section id="about" class="about-section">
-  <div class="about-container">
-    <div class="about-image">
-      <img src="img/landingpage1.jpg" alt="About Shoe Store">
-    </div>
-    <div class="about-content">
-      <h2>About Us</h2>
-      <p>
-        Welcome to <strong>SikilKaryo</strong>, your go-to destination for high-quality shoes. We provide a diverse selection of footwear to meet all your needs, from casual wear to high-performance athletic shoes. Our mission is to offer style, comfort, and durability at unbeatable prices.
-      </p>
-      <p>
-        Founded in 2022, ShoeMart has quickly become a trusted name in the industry, known for our excellent customer service and premium products. We believe that the right pair of shoes can take you anywhere!
-      </p>
-      <p>
-        Shop with us and experience the best in footwear. Whether you’re looking for the latest trends or timeless classics, we’ve got you covered!
-      </p>
-      <a href="#products" class="about-btn">Shop Now</a>
-    </div>
-  </div>
-</section>
+    <section id="about" class="about-section">
+      <div class="about-container">
+        <div class="about-image">
+          <img src="img/landingpage1.jpg" alt="About Shoe Store" />
+        </div>
+        <div class="about-content">
+          <h2>About Us</h2>
+          <p>
+            Welcome to <strong>SikilKaryo</strong>, your go-to destination for
+            high-quality shoes. We provide a diverse selection of footwear to
+            meet all your needs, from casual wear to high-performance athletic
+            shoes. Our mission is to offer style, comfort, and durability at
+            unbeatable prices.
+          </p>
+          <p>
+            Founded in 2022, ShoeMart has quickly become a trusted name in the
+            industry, known for our excellent customer service and premium
+            products. We believe that the right pair of shoes can take you
+            anywhere!
+          </p>
+          <p>
+            Shop with us and experience the best in footwear. Whether you’re
+            looking for the latest trends or timeless classics, we’ve got you
+            covered!
+          </p>
+          <a href="#products" class="about-btn">Shop Now</a>
+        </div>
+      </div>
+    </section>
 
-<!-- Products Page -->
-<section id="products" class="products-page">
-  <div class="products-header">
-    <h2>Our Products</h2>
-    <div class="filter-controls">
-      <label for="category-filter">Filter by Category:</label>
-      <select id="category-filter">
-        <option value="all">All</option>
-        <option value="nike">Nike</option>
-        <option value="vans">Vans</option>
-        <option value="newbalance">New Balance</option>
-      </select>
-      <label for="items-per-page">Items per Page:</label>
-      <select id="items-per-page">
-        <option value="5">5</option>
-        <option value="10">10</option>
-        <option value="15">15</option>
-      </select>
-    </div>
-  </div>
-  <div class="products-gallery" id="product-list">
-    <div class="product-item" data-category="vans">
-      <img src="/pweb-js-P25-2024/img/card-item1.jpg" alt="Shoe 1" />
-      <h3>Vans Oldskool Brown</h3>
-      <p>$50</p>
-      <a href="#" class="buy-btn">Buy Now</a>
-    </div>
-    <div class="product-item" data-category="nike">
-      <img src="/pweb-js-P25-2024/img/card-item2.jpg" alt="Shoe 2" />
-      <h3>Nike Air Force 1 TW</h3>
-      <p>$65</p>
-      <a href="#" class="buy-btn">Buy Now</a>
-    </div>
-    <div class="product-item" data-category="nike">
-      <img src="/pweb-js-P25-2024/img/card-item3.jpg" alt="Shoe 3" />
-      <h3>Nike Running Red</h3>
-      <p>$80</p>
-      <a href="#" class="buy-btn">Buy Now</a>
-    </div>
-    <div class="product-item" data-category="nike">
-      <img src="/pweb-js-P25-2024/img/card-item4.jpg" alt="Shoe 4" />
-      <h3>Nike Air Max LD</h3>
-      <p>$90</p>
-      <a href="#" class="buy-btn">Buy Now</a>
-    </div>
-    <div class="product-item" data-category="nike">
-      <img src="/pweb-js-P25-2024/img/card-item5.jpg" alt="Shoe 5" />
-      <h3>Nike Air Max 1 BR</h3>
-      <p>$70</p>
-      <a href="#" class="buy-btn">Buy Now</a>
-    </div>
-    <div class="product-item" data-category="nike">
-      <img src="/pweb-js-P25-2024/img/card-item6.jpg" alt="Shoe 6" />
-      <h3>Nike Traviss Scott</h3>
-      <p>$60</p>
-      <a href="#" class="buy-btn">Buy Now</a>
-    </div>
-    <div class="product-item" data-category="nike">
-      <img src="/pweb-js-P25-2024/img/card-item7.jpg" alt="Shoe 7" />
-      <h3>Nike Blazer Orange</h3>
-      <p>$75</p>
-      <a href="#" class="buy-btn">Buy Now</a>
-    </div>
-    <div class="product-item" data-category="newbalance">
-      <img src="/pweb-js-P25-2024/img/card-item8.jpg" alt="Shoe 8" />
-      <h3>New Balance 1206</h3>
-      <p>$100</p>
-      <a href="#" class="buy-btn">Buy Now</a>
-    </div>
-    <div class="product-item" data-category="nike">
-      <img src="/pweb-js-P25-2024/img/card-item9.jpg" alt="Shoe 9" />
-      <h3>Nike Air Jordan Hi OG</h3>
-      <p>$120</p>
-      <a href="#" class="buy-btn">Buy Now</a>
-    </div>
-    <div class="product-item" data-category="nike">
-      <img src="/pweb-js-P25-2024/img/card-item10.jpg" alt="Shoe 10" />
-      <h3>Nike Dunk Low Suede</h3>
-      <p>$120</p>
-      <a href="#" class="buy-btn">Buy Now</a>
-    </div>
-    <div class="product-item" data-category="nike">
-      <img src="/pweb-js-P25-2024/img/card-large-item11.jpg" alt="Shoe 11" />
-      <h3>Nike Air Force Black</h3>
-      <p>$140</p>
-      <a href="#" class="buy-btn">Buy Now</a>
-    </div>
-    <div class="product-item" data-category="nike">
-      <img src="/pweb-js-P25-2024/img/card-image1.jpg" alt="Shoe 12" />
-      <h3>Nike Dunk Blue Ocean</h3>
-      <p>$150</p>
-      <a href="#" class="buy-btn">Buy Now</a>
-    </div>
-  </div>
-</section>
+    <!-- Products Page -->
+    <section id="products" class="products-page">
+      <div class="products-header">
+        <h2>Our Products</h2>
+        <div class="filter-controls">
+          <label for="category-filter">Filter by Category:</label>
+          <select id="category-filter">
+            <option value="all">All</option>
+            <option value="adidas">Adidas</option>
+            <option value="nike">Nike</option>
+            <option value="puma">Puma</option>
+            <option value="converse">Converse</option>
+            <option value="vans">Vans</option>
+            <option value="reebok">Reebok</option>
+            <option value="asics">Asics</option>
+          </select>
+          <label for="items-per-page">Items per Page:</label>
+          <select id="items-per-page">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+            <option value="30">30</option>
+            <option value="50">50</option>
+          </select>
+        </div>
+      </div>
+      <div class="products-gallery" id="product-list">
+        <div class="product-item" data-category="vans">
+          <img src="/pweb-js-P25-2024/img/card-item1.jpg" alt="Shoe 1" />
+          <h3>Vans Oldskool Brown</h3>
+          <p>$50</p>
+          <a href="#" class="buy-btn">Buy Now</a>
+        </div>
+        <div class="product-item" data-category="nike">
+          <img src="/pweb-js-P25-2024/img/card-item2.jpg" alt="Shoe 2" />
+          <h3>Nike Air Force 1 TW</h3>
+          <p>$65</p>
+          <a href="#" class="buy-btn">Buy Now</a>
+        </div>
+        <div class="product-item" data-category="nike">
+          <img src="/pweb-js-P25-2024/img/card-item3.jpg" alt="Shoe 3" />
+          <h3>Nike Running Red</h3>
+          <p>$80</p>
+          <a href="#" class="buy-btn">Buy Now</a>
+        </div>
+        <div class="product-item" data-category="nike">
+          <img src="/pweb-js-P25-2024/img/card-item4.jpg" alt="Shoe 4" />
+          <h3>Nike Air Max LD</h3>
+          <p>$90</p>
+          <a href="#" class="buy-btn">Buy Now</a>
+        </div>
+        <div class="product-item" data-category="nike">
+          <img src="/pweb-js-P25-2024/img/card-item5.jpg" alt="Shoe 5" />
+          <h3>Nike Air Max 1 BR</h3>
+          <p>$70</p>
+          <a href="#" class="buy-btn">Buy Now</a>
+        </div>
+        <div class="product-item" data-category="nike">
+          <img src="/pweb-js-P25-2024/img/card-item6.jpg" alt="Shoe 6" />
+          <h3>Nike Traviss Scott</h3>
+          <p>$60</p>
+          <a href="#" class="buy-btn">Buy Now</a>
+        </div>
+        <div class="product-item" data-category="nike">
+          <img src="/pweb-js-P25-2024/img/card-item7.jpg" alt="Shoe 7" />
+          <h3>Nike Blazer Orange</h3>
+          <p>$75</p>
+          <a href="#" class="buy-btn">Buy Now</a>
+        </div>
+        <div class="product-item" data-category="newbalance">
+          <img src="/pweb-js-P25-2024/img/card-item8.jpg" alt="Shoe 8" />
+          <h3>New Balance 1206</h3>
+          <p>$100</p>
+          <a href="#" class="buy-btn">Buy Now</a>
+        </div>
+        <div class="product-item" data-category="nike">
+          <img src="/pweb-js-P25-2024/img/card-item9.jpg" alt="Shoe 9" />
+          <h3>Nike Air Jordan Hi OG</h3>
+          <p>$120</p>
+          <a href="#" class="buy-btn">Buy Now</a>
+        </div>
+        <div class="product-item" data-category="nike">
+          <img src="/pweb-js-P25-2024/img/card-item10.jpg" alt="Shoe 10" />
+          <h3>Nike Dunk Low Suede</h3>
+          <p>$120</p>
+          <a href="#" class="buy-btn">Buy Now</a>
+        </div>
+        <div class="product-item" data-category="nike">
+          <img
+            src="/pweb-js-P25-2024/img/card-large-item11.jpg"
+            alt="Shoe 11"
+          />
+          <h3>Nike Air Force Black</h3>
+          <p>$140</p>
+          <a href="#" class="buy-btn">Buy Now</a>
+        </div>
+        <div class="product-item" data-category="nike">
+          <img src="/pweb-js-P25-2024/img/card-image1.jpg" alt="Shoe 12" />
+          <h3>Nike Dunk Blue Ocean</h3>
+          <p>$150</p>
+          <a href="#" class="buy-btn">Buy Now</a>
+        </div>
+      </div>
+    </section>
 
- <!-- Cart Section -->
-<section id="cart" class="cart-section">
-  <div class="cart-header">
-    <h2>Your Cart</h2>
-  </div>
-  <div class="cart-items"></div>
-  <div class="cart-total">
-    <h3>Total: <span id="total-price">$0</span></h3>
-  </div>
-</section>
+    <!-- Cart Section -->
+    <section id="cart" class="cart-section">
+      <div class="cart-header">
+        <h2>Your Cart</h2>
+      </div>
+      <div class="cart-items"></div>
+      <div class="cart-total">
+        <h3>Total: <span id="total-price">$0</span></h3>
+      </div>
+    </section>
 
-    
-<!-- Comment Section -->
+    <!-- Comment Section -->
+    <section id="review">
       <div class="comments-form">
         <div>
           <h3>Leave a Review</h3>
