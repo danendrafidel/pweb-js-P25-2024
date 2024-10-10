@@ -379,3 +379,39 @@ document.addEventListener("DOMContentLoaded", function () {
   imageObserver.observe(aboutImage);
   textObserver.observe(aboutContent);
 });
+
+// slide show background pada footer
+document.addEventListener("DOMContentLoaded", function () {
+  const image = [
+    "/pweb-js-P25-2024/img/card-large-item11.jpg",
+    "/pweb-js-P25-2024/img/card-large-item10.jpg",
+    "/pweb-js-P25-2024/img/card-large-item12.jpg",
+    "/pweb-js-P25-2024/img/card-large-item9.jpg",
+    "/pweb-js-P25-2024/img/card-large-item8.jpg",
+  ];
+
+  const slideshowContainer = document.querySelector(".background-slideshow");
+
+  image.forEach((src, index) => {
+    const img = document.createElement("img");
+    img.src = src;
+    img.className = index === 0 ? "active" :  "out";
+    slideshowContainer.appendChild(img);
+
+  });
+
+  let currentIndex = 0;
+
+  setInterval(() => {
+    const currentImage = slideshowContainer.querySelector("img.active");
+    const nextImage = slideshowContainer.querySelectorAll("img")[currentIndex + 1] || slideshowContainer.querySelector("img:first-child");
+
+    currentImage.classList.remove("active");
+    currentImage.classList.add("out");
+
+    nextImage.classList.add("active");
+    nextImage.classList.remove("out");
+
+    currentIndex = (currentIndex + 1) % image.length;
+  }, 5000);
+});
