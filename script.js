@@ -1,4 +1,4 @@
-//Bagian API Custom
+// Bagian API Custom
 
 document.addEventListener("DOMContentLoaded", function () {
   const productList = document.getElementById("product-list");
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
   fetchProducts();
 });
 
-// // Bagian Filter
+// Bagian Filter
 document.addEventListener("DOMContentLoaded", function () {
   const categoryFilter = document.getElementById("category-filter");
   const itemsPerPageSelect = document.getElementById("items-per-page");
@@ -110,115 +110,43 @@ document.addEventListener("DOMContentLoaded", function () {
   fetchProducts();
 });
 
-// //Bagian Cart Update
-// // JavaScript for Cart Functionality
+//Bagian Cart
+
+// bagian search product
 // document.addEventListener("DOMContentLoaded", function () {
-//   const cartItemsContainer = document.querySelector(".cart-items");
-//   const totalPriceElement = document.getElementById("total-price");
+//   const searchInput = document.getElementById("search-input");
 //   const productItems = document.querySelectorAll(".product-item");
-//   const cart = {};
+//   const productList = document.getElementById("product-list");
+//   const unavailableMessage = document.createElement("div");
+//   unavailableMessage.innerText = "Product Unavailable";
+//   unavailableMessage.style.display = "none"; // Sembunyikan pesan awal
+//   productList.appendChild(unavailableMessage);
 
-//   // Function to update cart total
-//   function updateCartTotal() {
-//     let total = 0;
-//     for (const id in cart) {
-//       total += cart[id].price * cart[id].quantity;
-//     }
-//     totalPriceElement.innerText = `$${total.toFixed(2)}`;
-//   }
+//   // Function to handle search
+//   function handleSearch() {
+//     const searchTerm = searchInput.value.toLowerCase().trim();
+//     let foundProducts = 0;
 
-//   // Function to render cart items
-//   function renderCartItems() {
-//     cartItemsContainer.innerHTML = ""; // Clear existing items
-//     for (const id in cart) {
-//       const item = cart[id];
-//       const cartItem = document.createElement("div");
-//       cartItem.classList.add("cart-item");
-//       cartItem.innerHTML = `
-//           <h4>${item.name} ($${item.price})</h4>
-//           <div>
-//             <button class="decrease-btn" data-id="${id}">-</button>
-//             <span>${item.quantity}</span>
-//             <button class="increase-btn" data-id="${id}">+</button>
-//             <button class="remove-btn" data-id="${id}">Remove</button>
-//           </div>
-//         `;
-//       cartItemsContainer.appendChild(cartItem);
-//     }
-//     updateCartTotal();
-//   }
+//     productItems.forEach((item) => {
+//       const itemName = item.querySelector("h3").innerText.toLowerCase();
 
-//   // Function to add item to cart
-//   function addToCart(id, name, price) {
-//     if (!cart[id]) {
-//       cart[id] = { name, price, quantity: 1 };
+//       // Check if the product matches the search term
+//       if (itemName.includes(searchTerm)) {
+//         item.style.display = "block"; // Tampilkan produk yang cocok
+//         foundProducts++;
+//       } else {
+//         item.style.display = "none"; // Sembunyikan produk yang tidak cocok
+//       }
+//     });
+
+//     // Tampilkan atau sembunyikan pesan 'Product Unavailable'
+//     if (foundProducts === 0) {
+//       unavailableMessage.style.display = "block"; // Tampilkan pesan jika tidak ada produk yang ditemukan
 //     } else {
-//       cart[id].quantity += 1;
+//       unavailableMessage.style.display = "none"; // Sembunyikan pesan jika ada produk yang ditemukan
 //     }
-//     renderCartItems();
 //   }
 
-//   // Event delegation for cart item buttons
-//   cartItemsContainer.addEventListener("click", (event) => {
-//     const target = event.target;
-//     const itemId = target.getAttribute("data-id");
-
-//     if (target.classList.contains("remove-btn")) {
-//       delete cart[itemId]; // Remove item from cart
-//       renderCartItems();
-//     } else if (target.classList.contains("increase-btn")) {
-//       if (cart[itemId]) {
-//         cart[itemId].quantity += 1;
-//         renderCartItems();
-//       }
-//     } else if (target.classList.contains("decrease-btn")) {
-//       if (cart[itemId]) {
-//         if (cart[itemId].quantity > 1) {
-//           cart[itemId].quantity -= 1;
-//         } else {
-//           delete cart[itemId]; // Remove item if quantity is 1
-//         }
-//         renderCartItems();
-//       }
-//     }
-//   });
+//   // Event listener untuk menangani input pencarian
+//   searchInput.addEventListener("input", handleSearch);
 // });
-
-// // bagian search product
-document.addEventListener("DOMContentLoaded", function () {
-  const searchInput = document.getElementById("search-input");
-  const productItems = document.querySelectorAll(".product-item");
-  const productList = document.getElementById("product-list");
-  const unavailableMessage = document.createElement("div");
-  unavailableMessage.innerText = "Product Unavailable";
-  unavailableMessage.style.display = "none"; // Sembunyikan pesan awal
-  productList.appendChild(unavailableMessage);
-
-  // Function to handle search
-  function handleSearch() {
-    const searchTerm = searchInput.value.toLowerCase().trim();
-    let foundProducts = 0;
-
-    productItems.forEach((item) => {
-      const itemName = item.querySelector("h3").innerText.toLowerCase();
-
-      // Check if the product matches the search term
-      if (itemName.includes(searchTerm)) {
-        item.style.display = "block"; // Tampilkan produk yang cocok
-        foundProducts++;
-      } else {
-        item.style.display = "none"; // Sembunyikan produk yang tidak cocok
-      }
-    });
-
-    // Tampilkan atau sembunyikan pesan 'Product Unavailable'
-    if (foundProducts === 0) {
-      unavailableMessage.style.display = "block"; // Tampilkan pesan jika tidak ada produk yang ditemukan
-    } else {
-      unavailableMessage.style.display = "none"; // Sembunyikan pesan jika ada produk yang ditemukan
-    }
-  }
-
-  // Event listener untuk menangani input pencarian
-  searchInput.addEventListener("input", handleSearch);
-});
