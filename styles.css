@@ -220,6 +220,8 @@ body::-webkit-scrollbar {
 .filter-controls label {
   font-size: 1rem;
   color: black;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .filter-controls select {
@@ -289,6 +291,7 @@ body::-webkit-scrollbar {
 .add-to-cart-btn:hover {
   background-color: darkblue;
   text-decoration: underline;
+  transform: scale(1.05);
 }
 
 /* Cart if Non Add Section Styling */
@@ -363,12 +366,13 @@ body::-webkit-scrollbar {
 }
 .remove-item-btn:hover {
   background-color: rgb(195, 13, 13);
+  transform: scale(1.05);
 }
 
 .increase-quantity-btn {
   background-color: black;
   color: white;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 2rem;
   text-decoration: none;
   border-radius: 100px;
   text-transform: uppercase;
@@ -376,12 +380,13 @@ body::-webkit-scrollbar {
 }
 .increase-quantity-btn:hover {
   background-color: orange;
+  transform: scale(1.05);
 }
 
 .decrease-quantity-btn {
   background-color: black;
   color: white;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 2rem;
   text-decoration: none;
   border-radius: 100px;
   text-transform: uppercase;
@@ -389,6 +394,7 @@ body::-webkit-scrollbar {
 }
 .decrease-quantity-btn:hover {
   background-color: orange;
+  transform: scale(1.05);
 }
 /* Cart Styling Final*/
 .cart-total {
@@ -426,6 +432,7 @@ body::-webkit-scrollbar {
 #checkout-btn:hover {
   background-color: darkblue;
   text-decoration: underline;
+  transform: scale(1.05);
 }
 
 /* Comment Section */
@@ -475,6 +482,7 @@ body::-webkit-scrollbar {
 .submit-btn:hover {
   background-color: darkblue;
   text-decoration: underline;
+  transform: scale(1.05);
 }
 
 /* Footer Styles */
