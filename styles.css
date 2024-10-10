@@ -152,10 +152,19 @@ body::-webkit-scrollbar {
   background-color: darkblue;
   text-decoration: underline;
 }
+
 /* About Us Section Styles */
 .about-section {
   padding: 4rem 0;
   background-color: whitesmoke;
+  /* opacity: 0; */
+  transform: translateX(-50px);
+  /* transition: opacity 2s ease-out, transform 2s ease-out; */
+}
+
+.about-section.show {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .about-container {
@@ -168,6 +177,17 @@ body::-webkit-scrollbar {
   padding: 0 2rem;
 }
 
+.about-image {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.about-image.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 .about-image img {
   width: 500px;
   height: auto;
@@ -178,6 +198,15 @@ body::-webkit-scrollbar {
 .about-content {
   max-width: 600px;
   padding-left: 2rem;
+  opacity: 0;
+  transform: translateX(100px);
+  transition: opacity 2.5s ease-out, transform  2.5s ease-out;
+
+}
+
+.about-content.show {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .about-content h2 {
@@ -423,7 +452,7 @@ body::-webkit-scrollbar {
   background-color: black;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 50px;
   cursor: pointer;
   transition: background-color 0.3s ease;
   font-weight: bold;

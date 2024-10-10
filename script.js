@@ -341,3 +341,41 @@ document.addEventListener("DOMContentLoaded", function () {
   // Event listener untuk menangani input pencarian
   searchInput.addEventListener("input", handleSearch);
 });
+
+// saat about product muncul, akan ada transisi fade
+document.addEventListener("DOMContentLoaded", function () {
+  const aboutImage = document.querySelector(".about-image");
+  const aboutContent = document.querySelector(".about-content");
+
+  const imageObserverOptions = {
+    root: null,
+    threshold: 0.1
+  };
+
+  const imageObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, imageObserverOptions);
+
+  const textObserverOptions = {
+    root: null,
+    threshold: 0.5
+  };
+
+  const textObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        observer.unobserve(entry.target);
+      }
+    });
+
+  }, textObserverOptions);
+
+  imageObserver.observe(aboutImage);
+  textObserver.observe(aboutContent);
+});
