@@ -274,20 +274,22 @@ body::-webkit-scrollbar {
 .product-item:hover {
   transform: scale(1.05);
 }
-
-.buy-btn {
+/* Trigger Buy Button */
+.add-to-cart-btn {
   background-color: black;
   color: white;
   padding: 0.5rem 1rem;
   text-decoration: none;
   border-radius: 100px;
+  text-transform: uppercase;
+  font-weight: bold;
 }
-.buy-btn:hover {
+.add-to-cart-btn:hover {
   background-color: darkblue;
   text-decoration: underline;
 }
 
-/* General Cart Section Styling */
+/* Cart if Non Add Section Styling */
 .cart-section {
   width: 100%;
   max-width: 800px;
@@ -315,7 +317,7 @@ body::-webkit-scrollbar {
   margin-bottom: 20px;
 }
 
-/* Cart Item Styling */
+/* Cart Item if Add Styling */
 .cart-item {
   display: flex;
   justify-content: space-between;
@@ -353,10 +355,10 @@ body::-webkit-scrollbar {
 .cart-item-price {
   font-size: 16px;
   font-weight: bold;
-  color: #27ae60;
+  color: black;
 }
 
-/* Cart Total Styling */
+/* Cart Styling */
 .cart-total {
   display: flex;
   justify-content: space-between;
