@@ -145,6 +145,7 @@ body::-webkit-scrollbar {
   text-decoration: none;
   border-radius: 100px;
   font-size: 1.25rem;
+  font-weight: bold;
 }
 
 .landing-btn:hover {
@@ -199,6 +200,7 @@ body::-webkit-scrollbar {
   border-radius: 100px;
   font-size: 1rem;
   cursor: pointer;
+  font-weight: bold;
 }
 
 .about-btn:hover {
@@ -274,7 +276,7 @@ body::-webkit-scrollbar {
 .product-item:hover {
   transform: scale(1.05);
 }
-/* Trigger Buy Button */
+/* Trigger Checkout Button */
 .add-to-cart-btn {
   background-color: black;
   color: white;
@@ -328,13 +330,6 @@ body::-webkit-scrollbar {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.cart-item img {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
 .cart-item-info {
   flex: 1;
   margin-left: 15px;
@@ -357,8 +352,45 @@ body::-webkit-scrollbar {
   font-weight: bold;
   color: black;
 }
+.remove-item-btn {
+  background-color: black;
+  color: white;
+  padding: 0.2rem 1rem;
+  text-decoration: none;
+  border-radius: 100px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.remove-item-btn:hover {
+  background-color: rgb(195, 13, 13);
+}
 
-/* Cart Styling */
+.increase-quantity-btn {
+  background-color: black;
+  color: white;
+  padding: 0.2rem 1rem;
+  text-decoration: none;
+  border-radius: 100px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.increase-quantity-btn:hover {
+  background-color: orange;
+}
+
+.decrease-quantity-btn {
+  background-color: black;
+  color: white;
+  padding: 0.2rem 1rem;
+  text-decoration: none;
+  border-radius: 100px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.decrease-quantity-btn:hover {
+  background-color: orange;
+}
+/* Cart Styling Final*/
 .cart-total {
   display: flex;
   justify-content: space-between;
@@ -366,7 +398,7 @@ body::-webkit-scrollbar {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 20px;
-  color: #333;
+  color: black;
 }
 
 .cart-total h3 {
@@ -388,6 +420,7 @@ body::-webkit-scrollbar {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  font-weight: bold;
 }
 
 #checkout-btn:hover {
@@ -436,6 +469,7 @@ body::-webkit-scrollbar {
   cursor: pointer;
   margin-bottom: 100px;
   transition: background-color 0.3s;
+  font-weight: bold;
 }
 
 .submit-btn:hover {
