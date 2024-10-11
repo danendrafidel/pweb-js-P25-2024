@@ -287,9 +287,41 @@ body::-webkit-scrollbar {
   font-size: 1rem;
 }
 
+/* Parallax Gap Section */
+.parallax-gap {
+  position: relative;
+  height: 3px;
+  overflow: hidden;
+  margin-bottom: 300px;
+}
+
+.parallax-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+
+.parallax-background img {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  height: 800px; 
+  transform: translate(-50%, -50%);
+  z-index: -3
+}
+
 /* Products Page Styles */
 .products-page {
   padding: 50px 0;
+  background-color: whitesmoke;
 }
 
 .products-header {
@@ -345,6 +377,7 @@ body::-webkit-scrollbar {
 .product-item:hover {
   transform: scale(1.05);
 }
+
 /* Trigger Checkout Button */
 .add-to-cart-btn {
   background-color: black;
@@ -362,6 +395,10 @@ body::-webkit-scrollbar {
 }
 
 /* Cart if Non Add Section Styling */
+.cart-background {
+  background-color: whitesmoke;
+}
+
 .cart-section {
   width: 100%;
   max-width: 800px;
@@ -463,6 +500,7 @@ body::-webkit-scrollbar {
   background-color: orange;
   transform: scale(1.05);
 }
+
 /* Cart Styling Final*/
 .cart-total {
   display: flex;
@@ -504,6 +542,7 @@ body::-webkit-scrollbar {
 
 /* Comment Section */
 .comments-form {
+  background-color: whitesmoke;
   display: flex;
   justify-content: center;
   text-align: center;
