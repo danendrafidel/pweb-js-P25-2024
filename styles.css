@@ -186,7 +186,6 @@ body::-webkit-scrollbar {
 .about-section {
   padding: 4rem 0;
   background-color: whitesmoke;
-  /* opacity: 0; */
   transform: translateX(-50px);
 }
 
