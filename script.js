@@ -363,7 +363,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const textObserverOptions = {
     root: null,
-    threshold: 0.5
+    threshold: 0.6
   };
 
   const textObserver = new IntersectionObserver((entries, observer) => {
@@ -414,4 +414,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
     currentIndex = (currentIndex + 1) % image.length;
   }, 5000);
+});
+
+// search product
+document.getElementById('searchInput').addEventListener('keydown', function (event) {
+  if (event.key === 'Enter') {
+      let searchTerm = this.value.toLowerCase();
+      let productItems = document.querySelectorAll('.product-item');
+      let matchingProducts = [];
+
+      productItems.forEach(function (product) {
+          let productName = product.querySelector('h3').textContent.toLowerCase();
+          if (productName.includes(searchTerm)) {
+              matchingProducts.push(productName);
+          }
+      });
+
+      if (matchingProducts.length > 0) {
+          alert("Produk ditemukan: \n" + matchingProducts.join('\n'));
+      } else {
+          alert('Product Unavailable');
+      }
+  }
 });

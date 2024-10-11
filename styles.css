@@ -130,8 +130,17 @@ body::-webkit-scrollbar {
   outline: none;
 }
 
+.navbar input#searchInput {
+  background-color: #333;
+  border: 2px solid white;
+  border-radius: 20px;
+  padding: 8px 15px;
+  color: white;
+  outline: none;
+}
+
 #searchInput::placeholder {
-  color: #000000;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 /* Landing Page Styles */
