@@ -183,6 +183,10 @@ body::-webkit-scrollbar {
 }
 
 /* About Us Section Styles */
+.about-background {
+  background-color: whitesmoke;
+}
+
 .about-section {
   padding: 4rem 0;
   background-color: whitesmoke;
