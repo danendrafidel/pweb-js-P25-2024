@@ -101,7 +101,6 @@ body::-webkit-scrollbar {
   margin: 4px 0;
 }
 
-/* hitamkan background search product, belum fix */
 .search-product {
   background-color: #555;
   border: 2px solid white;
@@ -121,7 +120,6 @@ body::-webkit-scrollbar {
 .search-product input::placeholder {
   color: rgba(255, 255, 255, 0.7);
 }
-/* sampe sini belum fix */
 
 #searchInput {
   padding: 5px;
@@ -190,7 +188,6 @@ body::-webkit-scrollbar {
   background-color: whitesmoke;
   /* opacity: 0; */
   transform: translateX(-50px);
-  /* transition: opacity 2s ease-out, transform 2s ease-out; */
 }
 
 .about-section.show {
@@ -300,6 +297,17 @@ body::-webkit-scrollbar {
   text-align: center;
   margin-bottom: 2rem;
   font-size: 48px;
+}
+
+.fade-in-bottom {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-bottom.show {
+  opacity: 1;
+  transform: translateY(0); 
 }
 
 .products-gallery {
@@ -543,6 +551,18 @@ body::-webkit-scrollbar {
   background-color: darkblue;
   text-decoration: underline;
   transform: scale(1.05);
+}
+
+/* animasi leave a review */
+.fade-in-bottom {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-bottom.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Footer Styles */

@@ -29,6 +29,7 @@
               type="text"
               id="searchInput"
               placeholder="🔍 Search Product"
+              oninput="filterProducts()"
             />
           </li>
         </ul>
@@ -87,7 +88,7 @@
     <!-- Products Page -->
     <section id="products" class="products-page">
       <div class="products-header">
-        <h2>Our Products</h2>
+        <h2 class="fade-in-bottom">Our Products</h2>
         <div class="filter-controls">
           <label for="category-filter">Filter by Category:</label>
           <select id="category-filter">
@@ -206,7 +207,7 @@
     <section id="review">
       <div class="comments-form">
         <div>
-          <h3>Leave a Review</h3>
+          <h3 class="fade-in-bottom">Leave a Review</h3>
           <form action="#" method="post">
             <input type="text" placeholder="Your Name" required />
             <textarea placeholder="Your Comment" required></textarea>

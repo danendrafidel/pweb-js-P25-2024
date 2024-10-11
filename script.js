@@ -437,3 +437,47 @@ document.getElementById('searchInput').addEventListener('keydown', function (eve
       }
   }
 });
+
+// animasi "our products"
+  document.addEventListener('DOMContentLoaded', function () {
+    const targetElement = document.querySelector('.products-header h2');
+
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.2
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target); 
+        }
+      });
+    }, observerOptions);
+
+    observer.observe(targetElement); 
+  });
+
+// animasi "leave a review"
+  document.addEventListener('DOMContentLoaded', function () {
+    const targetElements = document.querySelectorAll('.fade-in-bottom');
+
+    const observerOptions = {
+      root: null, 
+      rootMargin: '0px',
+      threshold: 0.2
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    targetElements.forEach(el => observer.observe(el));
+  });
