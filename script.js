@@ -349,7 +349,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const imageObserverOptions = {
     root: null,
-    threshold: 0.1
+    threshold: 0.1,
   };
 
   const imageObserver = new IntersectionObserver((entries, observer) => {
@@ -363,7 +363,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const textObserverOptions = {
     root: null,
-    threshold: 0.6
+    threshold: 0.6,
   };
 
   const textObserver = new IntersectionObserver((entries, observer) => {
@@ -373,7 +373,6 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.unobserve(entry.target);
       }
     });
-
   }, textObserverOptions);
 
   imageObserver.observe(aboutImage);
@@ -395,16 +394,17 @@ document.addEventListener("DOMContentLoaded", function () {
   image.forEach((src, index) => {
     const img = document.createElement("img");
     img.src = src;
-    img.className = index === 0 ? "active" :  "out";
+    img.className = index === 0 ? "active" : "out";
     slideshowContainer.appendChild(img);
-
   });
 
   let currentIndex = 0;
 
   setInterval(() => {
     const currentImage = slideshowContainer.querySelector("img.active");
-    const nextImage = slideshowContainer.querySelectorAll("img")[currentIndex + 1] || slideshowContainer.querySelector("img:first-child");
+    const nextImage =
+      slideshowContainer.querySelectorAll("img")[currentIndex + 1] ||
+      slideshowContainer.querySelector("img:first-child");
 
     currentImage.classList.remove("active");
     currentImage.classList.add("out");
@@ -417,67 +417,69 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // search product
-document.getElementById('searchInput').addEventListener('keydown', function (event) {
-  if (event.key === 'Enter') {
+document
+  .getElementById("searchInput")
+  .addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
       let searchTerm = this.value.toLowerCase();
-      let productItems = document.querySelectorAll('.product-item');
+      let productItems = document.querySelectorAll(".product-item");
       let matchingProducts = [];
 
       productItems.forEach(function (product) {
-          let productName = product.querySelector('h3').textContent.toLowerCase();
-          if (productName.includes(searchTerm)) {
-              matchingProducts.push(productName);
-          }
+        let productName = product.querySelector("h3").textContent.toLowerCase();
+        if (productName.includes(searchTerm)) {
+          matchingProducts.push(productName);
+        }
       });
 
       if (matchingProducts.length > 0) {
-          alert("Produk ditemukan: \n" + matchingProducts.join('\n'));
+        alert("Produk ditemukan: \n" + matchingProducts.join("\n"));
       } else {
-          alert('Product Unavailable');
+        alert("Product Unavailable");
       }
-  }
-});
+    }
+  });
 
 // animasi "our products"
-  document.addEventListener('DOMContentLoaded', function () {
-    const targetElement = document.querySelector('.products-header h2');
+document.addEventListener("DOMContentLoaded", function () {
+  const targetElement = document.querySelector(".products-header h2");
 
-    const observerOptions = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.2
-    };
+  const observerOptions = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.2,
+  };
 
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('show');
-          observer.unobserve(entry.target); 
-        }
-      });
-    }, observerOptions);
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
 
-    observer.observe(targetElement); 
-  });
+  observer.observe(targetElement);
+});
 
 // animasi "leave a review"
-  document.addEventListener('DOMContentLoaded', function () {
-    const targetElements = document.querySelectorAll('.fade-in-bottom');
+document.addEventListener("DOMContentLoaded", function () {
+  const targetElements = document.querySelectorAll(".fade-in-bottom");
 
-    const observerOptions = {
-      root: null, 
-      rootMargin: '0px',
-      threshold: 0.2
-    };
+  const observerOptions = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.2,
+  };
 
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('show');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, observerOptions);
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
 
-    targetElements.forEach(el => observer.observe(el));
-  });
+  targetElements.forEach((el) => observer.observe(el));
+});
